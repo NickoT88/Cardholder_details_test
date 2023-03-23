@@ -2,7 +2,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 @RunWith(Parameterized.class)
 public class AccountTest {
     private final String nameTest;
@@ -12,6 +13,7 @@ public class AccountTest {
         this.nameTest = nameTest;
         this.expected = expected;
     }
+
     @Parameterized.Parameters(name = "Тестовые данные: {0}, {1}")
     public static Object[][] getTestData() {
         return new Object[][]{
